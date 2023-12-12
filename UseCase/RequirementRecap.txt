@@ -1,0 +1,30 @@
+REQUIREMENT (IN VIETNAMESE)
+Ứng dụng mô phỏng quá trình phân bào của tế bào
+
+Yêu cầu
+- Trên giao diện chính: 
+	+ Tên ứng dụng + Chọn loại tế bào (Prokaryotic: Nhân sơ - Đơn giản/ Eukaryotic: Nhân thực - Phức tạp) + Help + Quit
+	+ Với mỗi loại tế bào, chọn các kiểu phân bào để khám phá:
+
+(.Nhân sơ: Không có thoi phân bào/tơ (Spindle), phân bào theo kiểu Trực phân (Amitosis), cụ thể là Phân đôi (Binary Fission): Từ một tế bào mẹ phân đôi giống hệt tế bào con. 
+	/Chú ý vì ko có thoi phân bào nên đây là VÔ TÍNH (con là bản sao).
+ .Nhân thực: Có thoi phân bào nên phân bào theo kiểu gián phân (Không trực tiếp cắt đôi tế bào mà thông qua thoi phân bào kéo NST ra 2 cực để tách thành 2 con), có 2 kiểu:
+	/Nguyên phân (Mitosis): Sau quá trình phân bào, 2 con sẽ mang bộ và sô lượng NST giống hệt mẹ, khiến cho chúng giống hệt nhau
+		=> VÔ TÍNH. Ví dụ: Tế bào da (Body/ Somatic Cell), dùng cho việc phát triển bộ phận cơ thể, thay thế tế bào chết
+	/Giảm phân (Meiosis): Kết quả sẽ tạo ra các con với số lượng NST giảm 1 nửa với mẹ, và các tế bào con khác nhau
+		=> HỮU TÍNH. Ví dụ: Tinh trùng/ Trứng (Gametes), chính giảm phân tạo nên sự đa dạng trong sinh học!
+// Hết phần kiến thức chung)
+
+	+ Help: Hướng dẫn cách sử dụng và mục đích ứng dụng
+	+ Quít: Có phần xác nhận
+
+- Trong quá trình mô phỏng:
+	+ Cho thấy được thành phần và từng chức năng của các bộ phận trong tế bào
+	+ 1 nút để bắt đầu quá trình phân bào qua từng giai đoạn
+	+ Thanh giai đoạn ở dưới màn hình: Pause, continue, quay lại, tua nhanh đến các giai đoạn khác
+	+ Có nút replay
+	+ Có nút về Menu
+	
+
+
+	

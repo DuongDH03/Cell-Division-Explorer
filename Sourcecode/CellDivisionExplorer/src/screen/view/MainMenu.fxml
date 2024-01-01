@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Cell Division Explorer">
+               <font>
+                  <Font name="System Bold" size="70.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="50.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnComponent" mnemonicParsing="false" onAction="#btnComponentPressed" prefHeight="80.0" style="-fx-background-color: #90EE90;" text="View Cell Component">
+               <VBox.margin>
+                  <Insets bottom="70.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnDivision" lineSpacing="10.0" mnemonicParsing="false" onAction="#btnDivisionPressed" prefHeight="80.0" prefWidth="230.0" style="-fx-background-color: #90EE90;" text="View Cell Division">
+               <VBox.margin>
+                  <Insets bottom="70.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnHelp" mnemonicParsing="false" onAction="#btnHelpPressed" prefHeight="80.0" prefWidth="230.0" style="-fx-background-color: #90EE90;" text="Help">
+               <VBox.margin>
+                  <Insets bottom="70.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnQuit" alignment="CENTER" mnemonicParsing="false" onAction="#btnQuitPressed" prefHeight="80.0" prefWidth="230.0" style="-fx-background-color: #90EE90;" text="Quit">
+               <VBox.margin>
+                  <Insets bottom="70.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

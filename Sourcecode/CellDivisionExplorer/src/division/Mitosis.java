@@ -7,7 +7,7 @@ public class Mitosis implements AsexualDivision {
     public String getVideoDirectory(){
         return null;
     }
-    public String Division(){
+    public String getDivision(){
         return "Mitosis";
     }
 

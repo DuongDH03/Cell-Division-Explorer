@@ -7,7 +7,7 @@ public class Meiosis implements SexualDivision {
     public String getVideoDirectory(){
         return null;
     }
-    public String Division(){
+    public String getDivision(){
         return "Meiosis";
     }
 

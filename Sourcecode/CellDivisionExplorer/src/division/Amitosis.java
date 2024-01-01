@@ -12,7 +12,7 @@ public class Amitosis implements AsexualDivision{
         // the path to the video in the src folder
     }
     @Override
-    public String Division(){
+    public String getDivision(){
         return "Amitosis";
     }
 

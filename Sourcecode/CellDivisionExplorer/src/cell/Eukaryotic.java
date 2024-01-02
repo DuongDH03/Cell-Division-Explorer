@@ -9,7 +9,7 @@ public class Eukaryotic extends Cell{
         super(cellName, components);
         this.asexual = new Mitosis();
         this.sexual = new Meiosis();
-        this.imageDirectory = "/resource/images/eukaryotic.png";
+        this.imageDirectory = "/resource/images/eukaryoticComponent.png";
     }
 
 }

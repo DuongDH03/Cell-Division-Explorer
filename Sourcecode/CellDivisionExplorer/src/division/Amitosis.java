@@ -3,12 +3,12 @@ package division;
 public class Amitosis implements AsexualDivision{
 	@Override
     public Integer[] getVideoTimeStamp(){
-        return null;
-        // the time stamp of the video in seconds
+        return new Integer[] {0, 12, 17, 33, 42, 52};
+        // the time stamp of the phases of the video in seconds
     }
     @Override
     public String getVideoDirectory(){
-        return null;
+        return "/resources/video/Amitosis.mp4";
         // the path to the video in the src folder
     }
     @Override

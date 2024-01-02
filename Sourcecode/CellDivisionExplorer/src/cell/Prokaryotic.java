@@ -9,7 +9,7 @@ public class Prokaryotic extends Cell{
         super(cellName, components);
         this.asexual = new Amitosis();
         this.sexual = null;
-        this.imageDirectory = "/resource/images/prokaryotic.png";
+        this.imageDirectory = "/resource/images/prokaryoticComponent.png";
     }
 
 }

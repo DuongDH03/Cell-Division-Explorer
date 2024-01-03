@@ -74,7 +74,7 @@ public class MainMenuController {
     }
     
     @FXML
-    void initialize() {
+    public void initialize() {
     	final String MAIN_FXML_PATH  = "/screen/view/MainMenu.fxml";
     	try {
     		FXMLLoader fxmlLoader = new FXMLLoader();

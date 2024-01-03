@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="lblDivision" text="Division">
+               <font>
+                  <Font name="System Bold" size="50.0" />
+               </font>
+            </Label>
+         </children></HBox>
+   </top>
+   <center>
+      <MediaView fx:id="mediaView" fitHeight="200.0" fitWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+   <bottom>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Slider fx:id="timeBar" onMouseDragged="#mouseDrag" onMousePressed="#mousePress" />
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="btnPlay" mnemonicParsing="false" onAction="#btnPlayPressed" style="-fx-background-color: #90EE90;" text="Play">
+                     <HBox.margin>
+                        <Insets right="40.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font></Button>
+                  <Button fx:id="btnPause" mnemonicParsing="false" onAction="#btnPausePressed" style="-fx-background-color: #90EE90;" text="Pause">
+                     <HBox.margin>
+                        <Insets right="40.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font></Button>
+                  <Button fx:id="btnReplay" mnemonicParsing="false" onAction="#btnReplayPressed" style="-fx-background-color: #90EE90;" text="Replay">
+                     <HBox.margin>
+                        <Insets right="40.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font></Button>
+                  <Button fx:id="btnNextPhase" mnemonicParsing="false" onAction="#btnNextPhasePressed" style="-fx-background-color: #90EE90;" text="Next Phase">
+                     <HBox.margin>
+                        <Insets right="40.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnPrevPhase" mnemonicParsing="false" onAction="#btnPrevPhasePressed" style="-fx-background-color: #90EE90;" text="Previous Phase">
+                     <HBox.margin>
+                        <Insets right="40.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnBack" mnemonicParsing="false" onAction="#btnBackPressed" style="-fx-background-color: #90EE90;" text="Back">
+                     <HBox.margin>
+                        <Insets right="40.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </bottom>
+</BorderPane>

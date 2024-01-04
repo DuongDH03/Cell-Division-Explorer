@@ -13,10 +13,12 @@ import cell.Cell;
 
 
 public class MainMenuController {
-	private Cell cell;
+	private Cell euCell;
+	private Cell proCell;
 	
-	public MainMenuController(Cell cell) {
-		this.cell = cell;
+	public MainMenuController(Cell euCell, Cell proCell) {
+		this.euCell = euCell;
+		this.proCell = proCell;
 	}
 	
     @FXML
@@ -36,7 +38,7 @@ public class MainMenuController {
     	try {
             final String CELL_TYPE_PATH = "/screen/view/CellTypeMenu.fxml";
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(CELL_TYPE_PATH));
-            fxmlLoader.setController(new CellTypeController(cell, "Component"));
+            fxmlLoader.setController(new CellTypeController(euCell, proCell, "Component"));
             Parent root = fxmlLoader.load();
             Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
             stage.setScene(new Scene(root));
@@ -52,7 +54,7 @@ public class MainMenuController {
     	try {
             final String CELL_TYPE_PATH = "/screen/view/CellTypeMenu.fxml";
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(CELL_TYPE_PATH));
-            fxmlLoader.setController(new CellTypeController(cell, "Division"));
+            fxmlLoader.setController(new CellTypeController(euCell, proCell, "Division"));
             Parent root = fxmlLoader.load();
             Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
             stage.setScene(new Scene(root));

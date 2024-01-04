@@ -8,7 +8,7 @@ public class Amitosis implements AsexualDivision{
     }
     @Override
     public String getVideoDirectory(){
-        return "/resources/video/Amitosis.mp4";
+        return "/resource/video/Amitosis.mp4";
         // the path to the video in the src folder
     }
     @Override

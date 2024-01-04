@@ -2,25 +2,32 @@ package screen.controller;
 
 import java.io.IOException;
 
-
 import cell.*;
-import division.Amitosis;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.*;
+import javafx.scene.Parent;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class DivisionTypeController {
-    private Cell cell;
-    private String cellMenuChoice;
+    private Cell usedCell;
+    private Cell unUsedCell;
 
-    public DivisionTypeController(Cell cell, String cellMenuChoice) {
-        this.cell = cell;
-        this.cellMenuChoice = cellMenuChoice;
+    public DivisionTypeController(Cell usedCell, Cell unUsedCell) {
+        if (usedCell instanceof Eukaryotic){
+        	this.usedCell = (Eukaryotic)usedCell;	
+        	this.unUsedCell = (Prokaryotic)unUsedCell;
+		}
+        else if (usedCell instanceof Prokaryotic) {
+        	this.usedCell = (Prokaryotic)usedCell;
+        	this.unUsedCell = (Eukaryotic)unUsedCell;
+        }
     }
+    
     @FXML
     private VBox vbox;
     
@@ -37,11 +44,11 @@ public class DivisionTypeController {
     private Button btnMitosis;
 
     @FXML
-    void btnAmitosisPressed(ActionEvent event) {
+    public void btnAmitosisPressed(ActionEvent event) {
     	 try {
     		 final String MEDIA_PATH = "/screen/view/MediaPlayer.fxml";
              FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(MEDIA_PATH));
-             fxmlLoader.setController(new MediaPlayerController(cell, "Ami"));
+             fxmlLoader.setController(new MediaPlayerController(usedCell, unUsedCell, "Ami"));
              Parent root = fxmlLoader.load();
              Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
              stage.setScene(new Scene(root));
@@ -53,11 +60,11 @@ public class DivisionTypeController {
     }
 
     @FXML
-    void btnMeiosisPressed(ActionEvent event) {
+    public void btnMeiosisPressed(ActionEvent event) {
     	try {
    		 final String MEDIA_PATH = "/screen/view/MediaPlayer.fxml";
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(MEDIA_PATH));
-            fxmlLoader.setController(new MediaPlayerController(cell, "Mei"));
+            fxmlLoader.setController(new MediaPlayerController(usedCell, unUsedCell, "Mei"));
             Parent root = fxmlLoader.load();
             Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
             stage.setScene(new Scene(root));
@@ -69,11 +76,11 @@ public class DivisionTypeController {
     }
 
     @FXML
-    void btnMitosisPressed(ActionEvent event) {
+    public void btnMitosisPressed(ActionEvent event) {
     	try {
       		 final String MEDIA_PATH = "/screen/view/MediaPlayer.fxml";
                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(MEDIA_PATH));
-               fxmlLoader.setController(new MediaPlayerController(cell, "Mit"));
+               fxmlLoader.setController(new MediaPlayerController(usedCell, unUsedCell, "Mit"));
                Parent root = fxmlLoader.load();
                Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
                stage.setScene(new Scene(root));
@@ -85,11 +92,17 @@ public class DivisionTypeController {
     }
     
     @FXML
-    void btnBackPressed(ActionEvent event) {
+    public void btnBackPressed(ActionEvent event) {
     	try {
             final String CELL_TYPE_PATH = "/screen/view/CellTypeMenu.fxml";
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(CELL_TYPE_PATH));
-            fxmlLoader.setController(new CellTypeController(cell, "Division"));
+            if (usedCell instanceof Eukaryotic) {
+                fxmlLoader.setController(new CellTypeController(usedCell,unUsedCell, "Division"));
+            }
+            else {
+                fxmlLoader.setController(new CellTypeController(unUsedCell, usedCell, "Division"));
+
+            }
             Parent root = fxmlLoader.load();
             Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
             stage.setScene(new Scene(root));
@@ -99,24 +112,23 @@ public class DivisionTypeController {
             e.printStackTrace();
         }
     }
-
+    
+    
+    @FXML
     public void initialize() {
-        
         try {
-        	if (cellMenuChoice.equals("Eu")) {
+        	if (usedCell instanceof Eukaryotic) {
                 btnAmitosis.setVisible(false);
                 vbox.getChildren().remove(btnAmitosis);
-            } else if (cellMenuChoice.equals("Pro")) {
+                
+                
+            } else if (usedCell instanceof Prokaryotic) {
                 btnMeiosis.setVisible(false);
                 btnMitosis.setVisible(false);
                 vbox.getChildren().remove(btnMeiosis);
-                vbox.getChildren().remove(btnMitosis);
+                vbox.getChildren().remove(btnMitosis); 
             }
-            final String DIVISION_TYPE_PATH = "/screen/view/DivisionTypeMenu.fxml";
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(DIVISION_TYPE_PATH));
-            fxmlLoader.setController(new CellTypeController(cell, "Division"));
-            Parent root = fxmlLoader.load();
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

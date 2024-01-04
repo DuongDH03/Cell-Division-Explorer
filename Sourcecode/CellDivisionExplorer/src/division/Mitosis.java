@@ -5,7 +5,7 @@ public class Mitosis implements AsexualDivision {
         return new Integer[] {0, 3, 9, 15, 22, 30, 34, 42};
     }
     public String getVideoDirectory(){
-        return "/resources/video/Mitosis.mp4";
+        return "/resource/video/Mitosis.mp4";
     }
     public String getDivision(){
         return "Mitosis";

@@ -1,6 +1,7 @@
 package screen.controller;
 
 import java.io.IOException;
+import java.util.Optional;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -8,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 import javafx.scene.*;
+import javafx.application.Platform;
 
 import cell.Cell;
 
@@ -72,7 +74,16 @@ public class MainMenuController {
 
     @FXML
     void btnQuitPressed(ActionEvent event) {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Confirmation Dialog");
+        alert.setHeaderText(null);
+        alert.setContentText("Are you sure you want to quit?");
 
+        Optional<ButtonType> result = alert.showAndWait();
+
+        if (result.get() == ButtonType.OK){
+            Platform.exit();
+        }
     }
     
     @FXML

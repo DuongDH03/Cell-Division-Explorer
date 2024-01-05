@@ -29,7 +29,7 @@
                         <Font name="System Bold" size="30.0" />
                      </font>
                   </Label>
-                  <Label fx:id="lblName" style="-fx-background-color: #FFA500;" text="ComponentName">
+                  <Label fx:id="lblName" style="-fx-background-color: #FFA500;">
                      <font>
                         <Font size="35.0" />
                      </font>
@@ -67,7 +67,7 @@
                   <Font name="System Bold" size="30.0" />
                </font>
             </Label>
-            <Label fx:id="lblFunction" text="ComponentFunction">
+            <Label fx:id="lblFunction">
                <font>
                   <Font size="35.0" />
                </font>

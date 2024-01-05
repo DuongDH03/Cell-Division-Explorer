@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Eukaryotic Cell">
+               <font>
+                  <Font name="System Bold" size="45.0" />
+               </font>
+            </Label>
+            <Region prefHeight="200.0" prefWidth="200.0" />
+            <VBox>
+               <children>
+                  <Label alignment="BOTTOM_RIGHT" contentDisplay="BOTTOM" style="-fx-background-color: #90EE90;" text="Component Name:">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblName" style="-fx-background-color: #FFA500;">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <AnchorPane BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="420.0" fitWidth="960.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="210.0">
+               <image>
+                  <Image url="@../../resource/image/eukaryoticComponent.jpg" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnPlasma" layoutX="404.0" layoutY="371.0" mnemonicParsing="false" onAction="#btnPlasmaPressed" opacity="0.0" prefHeight="27.0" prefWidth="127.0" text="Plasma Membrane" />
+            <Button fx:id="btnRibo" layoutX="280.0" layoutY="349.0" mnemonicParsing="false" onAction="#btnRiboPressed" opacity="0.0" prefHeight="36.0" prefWidth="110.0" text="Ribosomes" />
+            <Button fx:id="btnCyto" layoutX="210.0" layoutY="272.0" mnemonicParsing="false" onAction="#btnCytoPressed" opacity="0.0" prefHeight="34.0" prefWidth="110.0" text="Cytoplasm" />
+            <Button fx:id="btnSmoothEndo" layoutX="380.0" layoutY="103.0" mnemonicParsing="false" onAction="#btnSmoothEndo" opacity="0.0" prefHeight="50.0" prefWidth="102.0" text="Smooth Endoplasmic Reticulum" />
+            <Button fx:id="btnRoughEndo" layoutX="267.0" layoutY="103.0" mnemonicParsing="false" onAction="#btnRoughEndoPressed" opacity="0.0" prefHeight="50.0" prefWidth="97.0" text="Rough Endoplasmic Reticulum" />
+            <Button fx:id="btnMicrofilament" layoutX="214.0" layoutY="167.0" mnemonicParsing="false" onAction="#btnMicrofilamentPressed" opacity="0.0" prefHeight="42.0" prefWidth="105.0" text="Microfilament" />
+            <Button fx:id="btnLysosome" layoutX="214.0" layoutY="207.0" mnemonicParsing="false" onAction="#btnLysosomePressed" opacity="0.0" prefHeight="36.0" prefWidth="82.0" text="Lysosome" />
+            <Button fx:id="btnMicrotubule" layoutX="219.0" layoutY="249.0" mnemonicParsing="false" onAction="#btnMicrotubulePressed" opacity="0.0" prefHeight="30.0" prefWidth="92.0" text="Microtubule" />
+            <Button fx:id="btnInterFilaments" layoutX="224.0" layoutY="309.0" mnemonicParsing="false" onAction="#btnInterFilamentsPressed" opacity="0.0" prefHeight="39.0" prefWidth="112.0" text="Intermediate Filament" />
+            <Button fx:id="btnPero" layoutX="530.0" layoutY="124.0" mnemonicParsing="false" onAction="#btnPeroPressed" opacity="0.0" prefHeight="36.0" prefWidth="87.0" text="Peroxisome" />
+            <Button fx:id="btnMito" layoutX="588.0" layoutY="167.0" mnemonicParsing="false" onAction="#btnMitoPressed" opacity="0.0" prefHeight="30.0" prefWidth="96.0" text="Mitochondria" />
+            <Button fx:id="btnVacuole" layoutX="588.0" layoutY="207.0" mnemonicParsing="false" onAction="#btnVacuolePressed" opacity="0.0" prefHeight="27.0" prefWidth="71.0" text="Vacuole" />
+            <Button fx:id="btnGolgi" layoutX="587.0" layoutY="237.0" mnemonicParsing="false" onAction="#btnGolgiPressed" opacity="0.0" prefHeight="26.0" prefWidth="117.0" text="Golgi apparatus" />
+            <Button fx:id="btnNuclear" layoutX="566.0" layoutY="278.0" mnemonicParsing="false" onAction="#btnNuclearPressed" opacity="0.0" prefHeight="37.0" prefWidth="75.0" text="Nuclear Envelope" />
+            <Button fx:id="btnChromatin" layoutX="571.0" layoutY="321.0" mnemonicParsing="false" onAction="#btnChromatinPressed" opacity="0.0" prefHeight="34.0" prefWidth="78.0" text="Chromatin" />
+            <Button fx:id="btnNucleoplasm" layoutX="569.0" layoutY="354.0" mnemonicParsing="false" onAction="#btnNucleoplasmPressed" opacity="0.0" prefHeight="26.0" prefWidth="91.0" text="Nucleoplasm" />
+            <Button fx:id="btnNucleolus" layoutX="572.0" layoutY="383.0" mnemonicParsing="false" onAction="#btnNucleolusPressed" opacity="0.0" prefHeight="30.0" prefWidth="68.0" text="Nucleolus" />
+         </children>
+      </AnchorPane>
+   </center>
+   <bottom>
+      <VBox prefHeight="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label style="-fx-background-color: #90EE90;" text="Component Function:">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblFunction">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </bottom>
+   <right>
+      <Button fx:id="btnBack" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#btnBackPressed" style="-fx-background-color: #90EE90;" text="Back" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets right="25.0" />
+         </BorderPane.margin>
+      </Button>
+   </right>
+</BorderPane>

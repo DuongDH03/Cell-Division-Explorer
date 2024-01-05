@@ -69,7 +69,18 @@ public class MainMenuController {
 
     @FXML
     void btnHelpPressed(ActionEvent event) {
-
+        try {
+            final String HELP_PATH = "/screen/view/HelpMenu.fxml";
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(HELP_PATH));
+            fxmlLoader.setController(new HelpController(euCell, proCell));
+            Parent root = fxmlLoader.load();
+            Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Cell Division Explorer");
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML

@@ -43,6 +43,21 @@ public class CellTypeController {
                 e.printStackTrace();
             }
         }
+        else {
+           try {
+        		final String EU_COMPONENT_PATH = "/screen/view/EukaryoticComponent.fxml";
+        		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(EU_COMPONENT_PATH));
+        		fxmlLoader.setController(new EukaryoticComponentController(euCell, proCell));
+        		Parent root = fxmlLoader.load();
+        		Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+        		stage.setScene(new Scene(root));
+                stage.setTitle("Cell Division Explorer");
+                stage.show();
+        		
+        	} catch (Exception e) {
+        		e.printStackTrace();
+        	} 
+        }
     }
 
     @FXML

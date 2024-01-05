@@ -1,8 +1,8 @@
 package cell;
 
 public class Component {
-	public String componentName;
-	public String componentFunction;
+	private String componentName;
+	private String componentFunction;
 	
 	public Component(String componentName, String componentFunction) {
 		super();

@@ -1,18 +1,31 @@
-# OOLT.VN.20231-09
+# Cell Division Explorer
 
-Nhóm 9 của lớp IT3103-143577 Object-oriented Programming<br />
-Giáo viên: Nguyễn Thị Thu Trang<br />
+Mục tiêu của chương trình: Đưa cho người dùng một cách nhìn khái quát về các bộ phận của tế bào và cơ chế phân chia tế bào trên 2 loại tế bào: Nhân sơ, và nhân thực
 
-## Các thành viên của nhóm 
-
-Nhóm trưởng: Nguyễn Văn Dũng (20215013): Công việc lên ý tưởng và thiết kế các Controller cho các View.<br /><br />
-Vũ Đức Dũng (20194527): Công việc xây dựng Class Diagram, viết báo cáo và chuẩn bị slide.<br /><br />
-Đinh Huy Dương (20215020): Thiết kế các View, Controller và làm video Demo.<br /><br />
-Hoàng Đức Dương (20215021): Chuẩn bị tài liệu như hình ảnh, video, nội dung của chức năng các bộ phận tế bào  với menu Help. Giúp xây dựng Media Player View.<br /><br />
+The goal of the Application: Helps the User explore how Cell Division works and what are the components of 2 types of Cell: Prokaryotic Cell, and Eukaryotic Cell
 
 ## Video Demo được đặt tại link sau:
 
 https://www.youtube.com/watch?v=Gjz6_wjBKRc
+
+## Application Prevew
+
+### Main Menu
+![image](https://github.com/DuongDH03/Cell-Division-Explorer/assets/146160191/013069ba-e394-4d56-837a-3fa4ebee3d18)
+
+### Cell Component View
+![image](https://github.com/DuongDH03/Cell-Division-Explorer/assets/146160191/b6bfb065-66b7-4bad-9c5b-529d4542e6ad)
+
+### Cell Division View 
+
+![image](https://github.com/DuongDH03/Cell-Division-Explorer/assets/146160191/de736ba1-73b4-4d95-b0ab-81537028546f)
+
+### Help Menu
+
+![image](https://github.com/DuongDH03/Cell-Division-Explorer/assets/146160191/7e29357e-c556-4945-9a58-39a1f560debc)
+
+
+
 
 
 

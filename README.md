@@ -19,7 +19,7 @@ It should look something like this:
 
 ### Eclipse
 Right now, Eclipse is in a really bad spot, since it's old and the User Interface isn't exactly welcoming.</br>
-Regarless, this Application was build on Eclipse. Let me show you how it's done</br>
+Regardless, this Application was build on Eclipse. Let me show you how it's done</br>
 
 - First when you have imported the project, go to Window > Preference > Search for "User Libraries" and add all the JavaFX .jar files you have downloaded, save that as JavaFX
 - ![image](https://github.com/DuongDH03/Cell-Division-Explorer/assets/146160191/426749a5-9b68-47b9-8471-a9491288a8b2)
